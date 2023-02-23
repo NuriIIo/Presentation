@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentation</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            user-select: none;
+        }
+
+        img {
+            width: 100%;
+            height: 100vh !important;
+            background-size: contain;
+        }
+
+        .btn {
+            width: 4%;
+            height: 6vh;
+            position: fixed;
+            top: 92%;
+            left: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #000;
+            font-size: 20px;
+            font-family: Arial;
+            border-radius: 10px;
+            border: 1px solid #000;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./intro.png" alt="">
+    <div class="btn">Next</div>
+    <script>
+        let img = document.querySelector("img");
+        let btn = document.querySelector(".btn");
+        btn.onclick = function () {
+            if (img.getAttribute("src") == "./intro.png") {
+                img.setAttribute("src", "./what-is-programming.jpg")
+            } else if (img.getAttribute("src") == "./what-is-programming.jpg") {
+                img.setAttribute("src", "./what-is-programming-language.jpg")
+            } else if (img.getAttribute("src") == "./what-is-programming-language.jpg") {
+                img.setAttribute("src", "./apps-development.png")
+            } else if (img.getAttribute("src") == "./apps-development.png") {
+                img.setAttribute("src", "./web-development.jpg")
+            } else if (img.getAttribute("src") == "./web-development.jpg") {
+                img.setAttribute("src", "./desktop-development.png")
+            } else if (img.getAttribute("src") == "./desktop-development.png") {
+                img.setAttribute("src", "./mobile-development.png")
+            } else if (img.getAttribute("src") == "./mobile-development.png") {
+                img.setAttribute("src", "./statistics.jpg")
+            } else if (img.getAttribute("src") == "./statistics.jpg") {
+                img.setAttribute("src", "./programming-languages.jpg")
+            } else {
+                img.setAttribute("src", "./intro.png")
+            }
+        }
+        img.onclick = function () {
+            img.setAttribute("src", "./what-is-programming.jpg")
+        }
+        
+    </script>
+</body>
+
+</html>
